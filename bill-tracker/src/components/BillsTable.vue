@@ -1,6 +1,6 @@
 <template>
   <table class="table w-full">
-    <thead class="bg-gold text-white">
+    <thead class="bg-blue text-white">
       <tr>
         <th class="p-4" scope="col">Date</th>
         <th class="p-4" scope="col">Amount</th>
@@ -9,7 +9,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr class="p-4 bg-gold text-center">
+      <tr class="p-4 bg-blue-lighter text-center">
         <td colspan="4" class="p-4">
           <button class="underline" @click="triggerShowAddBill">Add new</button>
         </td>

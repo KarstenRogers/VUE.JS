@@ -60,8 +60,8 @@ export default {
         labels: last12Months(),
         datasets: [
           {
-            label: "Amount Per Month $",
-            backgroundColor: "purple",
+            label: "Amount",
+            backgroundColor: "lightblue",
             data: processBills(this.bills)
           }
         ]
