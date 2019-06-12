@@ -13,15 +13,15 @@
           v-on:triggerShowAddCategory="triggerShowAddCategory"
         />
         <div class="container flex">
-          <div class="w-1/2">
+          <div class="w-1/2 bg-grey-lighter">
             <BillsTable
               :bills="bills"
               v-on:triggerShowAddBill="triggerShowAddBill"
               v-on:removeBill="removeBill"
             />
           </div>
-          <div class="w-1/2">
-            <Chart />
+          <div class="w-1/2 bg-grey-light pt-4 pl-4 text-2xl">
+            <Chart :bills="bills" />
           </div>
         </div>
       </div>

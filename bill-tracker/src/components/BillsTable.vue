@@ -1,24 +1,24 @@
 <template>
-  <table class="table">
-    <thead class="bg-blue text-white">
+  <table class="table w-full">
+    <thead class="bg-gold text-white">
       <tr>
-        <th scope="col">Date</th>
-        <th scope="col">Amount</th>
-        <th scope="col">Category</th>
-        <th scope="col"></th>
+        <th class="p-4" scope="col">Date</th>
+        <th class="p-4" scope="col">Amount</th>
+        <th class="p-4" scope="col">Category</th>
+        <th class="p-4" scope="col"></th>
       </tr>
     </thead>
     <tbody>
-      <tr class="p-4 bg-blue-lighter text-center">
-        <td colspan="4">
+      <tr class="p-4 bg-gold text-center">
+        <td colspan="4" class="p-4">
           <button class="underline" @click="triggerShowAddBill">Add new</button>
         </td>
       </tr>
       <tr v-for="(bill, index) in bills" :key="index" class="p-4">
-        <td>{{ bill.date | moment("MMM D YYYY") }}</td>
-        <td>${{ bill.amount }}</td>
-        <td>{{ bill.category }}</td>
-        <td><button @click="removeBill(index)">𝗫</button></td>
+        <td class="p-4">{{ bill.date | moment("MMM D YYYY") }}</td>
+        <td class="p-4">${{ bill.amount }}</td>
+        <td class="p-4">{{ bill.category }}</td>
+        <td class="p-4"><button @click="removeBill(index)">𝗫</button></td>
       </tr>
     </tbody>
   </table>
