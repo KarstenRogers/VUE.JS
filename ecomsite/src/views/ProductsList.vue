@@ -1,7 +1,8 @@
 <template>
     <div class="products-list">
         <div v-for="(product, index) in $store.getters.products"
-             :key="index">
+             :key="index"
+             @click="$router.push(`/product/${product.slug}`)">
             <img :src="product.imageUrl" />
             <h2>{{product.name}}</h2>
             <p class="description">{{product.description}}</p>
@@ -13,7 +14,7 @@
 
 <script>
     export default {
-        name: 'Products',
+        name: 'ProductsList',
         methods: {
             deleteProduct(index) {
                 this.$store.commit('deleteProduct', index)
