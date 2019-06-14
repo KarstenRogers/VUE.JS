@@ -1,6 +1,5 @@
 <template>
-  <div id="app">
-    <Form />
+  <div id="app">   <Form :handleGitHubData=handleGitHubData />
   </div>
 </template>
 
@@ -9,8 +8,18 @@
 
   export default {
     name: 'app',
+    data: function() {
+      return {
+        cards: []
+      }
+    },
     components: {
       Form
+    },
+    methods: {
+      handleGitHubData(data) {
+        this.cards.push(data)
+      }
     }
   }
 </script>

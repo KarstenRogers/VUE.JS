@@ -20,12 +20,16 @@
                 username: ''
             }
         },
+
+        props: {
+            handleGitHubData: Function
+        },
+
         methods: {
             addUser: function() {
                 axios.get(`https://api.github.com/users/${this.username}`).then(resp => {
-                    return {
-                       
-                    }
+                    this.handleGitHubData(resp.data)
+                    this.username = ''
                 })
             }
         }
