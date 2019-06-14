@@ -1,10 +1,12 @@
 <template>
   <div id="app">   <Form :handleGitHubData=handleGitHubData />
+    <CardList :cards=cards />
   </div>
 </template>
 
 <script>
   import Form from './components/Form.vue'
+  import CardList from './components/CardList.vue'
 
   export default {
     name: 'app',
@@ -14,7 +16,8 @@
       }
     },
     components: {
-      Form
+      Form,
+      CardList
     },
     methods: {
       handleGitHubData(data) {
