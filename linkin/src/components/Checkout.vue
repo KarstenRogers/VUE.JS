@@ -31,13 +31,12 @@
         </tr>
       </tbody>
     </table>
-    <router-link class="btn btn-sm btn-outline-info text-dark" to="/">Keep Shopping</router-link>
+      <router-link class="btn btn-sm btn-outline-info text-dark" to="/">Keep Shooping</router-link>
   </div>
 </template>
 
 <script>
 import Price from "./Price.vue";
-import VueRouter from "vue-router";
 
 export default {
   name: "checkout",

@@ -32,10 +32,7 @@
               >-</a>
             </div>
           </div>
-          <router-link
-            class="btn btn-sm btn-outline-info text-dark float-right mr-4 my-2"
-            to="/checkout"
-          >Checkout</router-link>
+            <router-link class="btn btn-sm btn-outline-info text-dark float-right" to="/checkout">Checkout</router-link>
         </div>
       </div>
     </div>
@@ -44,8 +41,6 @@
 
 <script>
 import Price from "./Price.vue";
-import VueRouter from "vue-router";
-
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 export default {
@@ -53,7 +48,6 @@ export default {
   props: ["cart", "cartQty", "cartTotal"],
   components: {
     FontAwesomeIcon,
-    VueRouter,
     Price
   }
 };
