@@ -1,23 +1,17 @@
 <template>
-  <transition-group
-    name="fade"
-    tag="div"
-    @beforeEnter="beforeEnter"
-    @enter="enter"
-    @leave="leave"
-  >
+  <transition-group name="fade" tag="div" @beforeEnter="beforeEnter" @enter="enter" @leave="leave">
     <div
       class="row d-none mb-3 align-items-center"
       v-for="(item, index) in products"
       :key="item.id"
-      v-if="item.price <= Number(maximum)"
+      v-if="item.price<=Number(maximum)"
       :data-index="index"
     >
       <div class="col-1 m-auto">
-        <button class="btn btn-info" @click="$emit('add', item)">+</button>
+        <button class="btn btn-info" @click="$parent.$emit('add', item)">+</button>
       </div>
       <div class="col-4">
-        <img class="img-fluid d-block" :src="item.image" :alt="item.name" />
+        <img class="img-fluid d-block" :src="item.image" :alt="item.name">
       </div>
       <div class="col">
         <h3 class="text-info">{{ item.name }}</h3>
@@ -31,7 +25,7 @@
 </template>
 
 <script>
-import Price from "./Price";
+import Price from "./Price.vue";
 
 export default {
   name: "product-list",
