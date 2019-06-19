@@ -1,28 +1,22 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div id="app" class="conatiner mt-5">
+    <h1>My Shop</h1>
+    <p class="animated FadeInRight">Take a look at are offerings</p>
+    <font-awesome-icon icon="shopping-cart"></font-awesome-icon>
+    <price value="4.52"></price>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import Price from './components/Price';
 
 export default {
   name: "app",
   components: {
-    HelloWorld
+    FontAwesomeIcon,
+    Price
   }
 };
 </script>
 
-<style>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
