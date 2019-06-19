@@ -1,27 +1,22 @@
 <template>
   <div id="app" class="container mt-5">
-    <products
+    <router-view
       :cart="cart"
       :cartQty="cartQty"
       :cartTotal="cartTotal"
       :sliderStatus="sliderStatus"
       :maximum.sync="maximum"
       :products="products"
-      @toggle="toggleSliderStatus"
       @delete="deleteItem"
       @add="addItem"
-    ></products>
+      @toggle="toggleSliderStatus"
+    ></router-view>
   </div>
 </template>
 
 <script>
-import Products from "./components/Products.vue";
-
 export default {
   name: "app",
-  components: {
-    Products
-  },
   data: function() {
     return {
       maximum: 99,
